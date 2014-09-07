@@ -1,0 +1,13 @@
+<h1><%= current_user.username %>'s Dashboard</h1>
+
+<%= form_for @text_shout do |form| %>
+  <%= form.text_field :message, placeholder: "Shout message here"%>
+  <%= form.submit 'Shout' %>
+<% end %>
+
+<%= form_for @photo_shout do |form| %>
+  <%= form.file_field :image %>
+  <%= form.submit 'Shout!' %>
+<% end %>
+
+<%= render @shouts %>
